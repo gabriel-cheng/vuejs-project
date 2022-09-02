@@ -1,10 +1,14 @@
 <script>
-
+    export default {
+        name: 'Pedidos',
+    }
 </script>
 
 <template>
-    <div>
-        <h1>PEDIDOS</h1>
+    <div id="main-container">
+        <div class="content">
+            <h1>PEDIDOS</h1>
+        </div>
     </div>
 </template>
 

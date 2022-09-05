@@ -1,4 +1,6 @@
 <script>
+import { objectToString } from '@vue/shared';
+
     export default {
         name: 'BurgerForm',
         data() {
@@ -10,7 +12,6 @@
                 pao: null,
                 carne: null,
                 opcionais: [],
-                status: "Solicitado",
                 msg: null
             }
         },
@@ -22,25 +23,31 @@
                 this.paes = data.paes;
                 this.carnes = data.carnes;
                 this.opcionaisData = data.opcionais;
+            },
+            createBurger() {
+                const data = {
+                    nome: this.nome,
+                    carne: this.carne,
+                    pao: this.pao,
+                    opcionais: Object.keys(this.opcionais),
+                    status: "Solicitado"
+                };
+
+                const dataJson = JSON.stringify(data);
+
+                const request = fetch("http://localhost:3000/burgers", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: dataJson
+                });
+
+                alert('Pedido registrado com sucesso!');
+
+                this.nome = "";
+                this.carne = "";
+                this.pao = "";
+                this.opcionais = "";
             }
-        },
-        async createBurger() {
-            const data = {
-                nome: this.nome,
-                carne: this.carne,
-                pao: this.pao,
-                opcionais: Array.from(this.opcionais),
-                status: this.status
-            };
-
-            const dataJson = JSON.stringify(data);
-
-            const request = await fetch("http://localhost:3000/burgers", {
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                boddy: dataJson
-            });
-
         },
         mounted() {
             this.getIngredientes();
@@ -52,10 +59,10 @@
     <div id="burger-form-main-container">
         <p>Componente de Mensagem</p>
         <div>
-            <form id="burger-form" @submit.prevent="createBurger">
+            <form id="burger-form" @submit.prevent="createBurger()">
                 <div class="input-container">
                     <label for="name">Nome do cliente:</label>
-                    <input type="text" name="name" id="inputName" v-model="name" placeholder="Digite seu nome">
+                    <input type="text" name="name" id="inputName" v-model="nome" placeholder="Digite seu nome">
                 </div>
                 <div class="input-container">
                     <label for="pao">Escolha o pão:</label>
@@ -74,7 +81,7 @@
                 <div class="input-container">
                     <label for="opcionais">Selecione os opcionais:</label>
                     <div v-for="opcional in opcionaisData" :key="opcional.id" class="checkbox-container">
-                        <input  type="checkbox" name="opcionais" v-model="opcionais" value="{{opcional.tipo}}">
+                        <input  type="checkbox" name="opcionais" v-model="opcionais[opcional.tipo]">
                         <span>{{opcional.tipo}}</span>
                     </div>
                 </div>

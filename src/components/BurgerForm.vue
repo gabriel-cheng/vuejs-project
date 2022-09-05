@@ -1,8 +1,12 @@
 <script>
-import { objectToString } from '@vue/shared';
+    import { objectToString } from '@vue/shared';
+    import Message from './Message.vue'
 
     export default {
         name: 'BurgerForm',
+        components: {
+            Message
+        },
         data() {
             return {
                 paes: null,
@@ -41,7 +45,9 @@ import { objectToString } from '@vue/shared';
                     body: dataJson
                 });
 
-                alert('Pedido registrado com sucesso!');
+                this.msg = 'Pedido relizado com sucesso!';
+
+                setTimeout(() => this.msg = "", 3000);
 
                 this.nome = "";
                 this.carne = "";
@@ -57,7 +63,7 @@ import { objectToString } from '@vue/shared';
 
 <template>
     <div id="burger-form-main-container">
-        <p>Componente de Mensagem</p>
+        <Message :msg="msg" v-show="msg" />
         <div>
             <form id="burger-form" @submit.prevent="createBurger()">
                 <div class="input-container">

@@ -79,67 +79,16 @@
   ],
   "burgers": [
     {
-      "nome": "Gabriel Henrique Souza de Carvalho",
-      "carne": "Veggie burger",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Bacon",
-        "Cheddar",
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "nome": "Diogo Espindola",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Cheddar",
-        "Pepino",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "nome": "Diogo Espindola",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Cheddar",
-        "Pepino",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 3
-    },
-    {
-      "nome": "Leozin Design",
+      "nome": "Gabriel Henrique",
       "carne": "Picanha",
       "pao": "3 Queijos",
       "opcionais": [
         "Bacon",
         "Cheddar",
-        "Salame",
-        "Tomate"
+        "Pepino"
       ],
       "status": "Solicitado",
-      "id": 4
-    },
-    {
-      "nome": "Joãozinho",
-      "carne": "Veggie burger",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Bacon",
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 5
+      "id": 1
     }
   ]
 }

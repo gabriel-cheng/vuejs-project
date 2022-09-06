@@ -89,6 +89,44 @@
       ],
       "status": "Solicitado",
       "id": 1
+    },
+    {
+      "nome": "Lucas Costa",
+      "carne": "Picanha",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Bacon",
+        "Cheddar",
+        "Cebola roxa",
+        "Pepino"
+      ],
+      "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "nome": "Dioguittos",
+      "carne": "Alcatra",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Bacon",
+        "Cheddar",
+        "Cebola roxa",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 3
+    },
+    {
+      "nome": "Gabriel Henrique",
+      "carne": "Alcatra",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon",
+        "Cheddar",
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 4
     }
   ]
 }

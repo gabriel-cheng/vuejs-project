@@ -22,6 +22,10 @@
 </template>
 
 <style scoped>
+    #main-container {
+        align-items: center;
+    }
+
     .content h1 {
         font-size: 3.5rem;
         margin: 0 0 50px 0;

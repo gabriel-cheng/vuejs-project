@@ -10,7 +10,7 @@
             <p>Make your Burger &copy; 2022</p>
         </section>
         <section class="footer-section-2">
-            <p>Todos os direitor reservados &copy; • Gabriel Carvalho</p>
+            <p>Todos os direitos reservados &copy; • Gabriel Carvalho</p>
         </section>
     </footer>
 </template>

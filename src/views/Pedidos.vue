@@ -25,5 +25,7 @@
 
     .content h1 {
         font-size: 5rem;
+        text-align: center;
+        margin: 0 0 90px 0;
     }
 </style>
